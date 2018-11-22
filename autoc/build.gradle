@@ -1,0 +1,51 @@
+apply plugin: 'groovy'
+apply plugin: 'maven'
+apply plugin: 'com.novoda.bintray-release'
+
+dependencies {
+    //gradle sdk
+    compile gradleApi()
+    //groovy sdk
+    compile localGroovy()
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'com.android.tools.build:gradle:3.2.1'
+
+}
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            //提交到远程服务器：
+//             repository(url: "") {
+//                authentication(userName: "", password: "")
+//             }
+            //本地的Maven地址设置为E:/repos
+            repository(url: uri('E:/maven/repository'))
+        }
+    }
+}
+
+publish {
+    userOrg = 'aprz512'
+    groupId = 'com.aprz.module.manager'
+    artifactId = 'autoc'
+    publishVersion = '1.4.0'
+    desc = 'easy use for component project'
+    website = 'https://github.com/aprz512/AutoComponent'
+    repoName = 'gradle_plugins'
+}
+
+tasks.withType(Javadoc) {
+    options {
+        encoding "UTF-8"
+        charSet 'UTF-8'
+        links "http://docs.oracle.com/javase/7/docs/api"
+    }
+}
+

@@ -1,0 +1,19 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.best.aprz.componenta" >
+
+    <application
+        android:name="debug.MyApp"
+        android:allowBackup="false"
+        android:icon="@drawable/c_a_ic_launcher"
+        android:label="@string/c_a_app_name"
+        android:supportsRtl="true"
+        android:theme="@style/CAAppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>
