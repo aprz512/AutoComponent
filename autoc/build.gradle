@@ -21,6 +21,9 @@ dependencies {
 uploadArchives {
     repositories {
         mavenDeployer {
+            pom.groupId = 'com.aprz.module.manager'
+            pom.artifactId = 'autoc'
+            pom.version = '1.5.3'
             //提交到远程服务器：
 //             repository(url: "") {
 //                authentication(userName: "", password: "")

@@ -1,1 +1,1 @@
-include ':app', ':autoc', ':componenta'
+include ':app', ':autoc', ':componenta', ':lib_a'

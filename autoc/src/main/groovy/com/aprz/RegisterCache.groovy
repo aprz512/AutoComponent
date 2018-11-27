@@ -24,11 +24,13 @@ class RegisterCache {
     }
 
     static void cacheBuildType(Project project, boolean isApp) {
+        println "AUTOC >>>> 正在缓存当前编译类型..."
         File cacheFile = getCacheFile(project, "build-type.json")
         cacheFile.getParentFile().mkdirs()
         if (!cacheFile.exists())
             cacheFile.createNewFile()
         cacheFile.write(isApp.toString())
+        println "AUTOC >>>> 缓存当前编译类型成功，完成率 100%"
     }
 
 
