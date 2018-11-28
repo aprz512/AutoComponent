@@ -3,14 +3,16 @@
 buildscript {
     
     repositories {
-        maven { url 'file:///E:/maven/repository'}
         google()
         jcenter()
+        maven {
+            url "https://dl.bintray.com/aprz512/gradle_plugins"
+        }
     }
     dependencies {
 
         classpath 'com.android.tools.build:gradle:3.2.1'
-        classpath 'com.aprz.module.manager:autoc:1.5.3'
+        classpath 'com.aprz.module.manager:autoc:1.4.0'
         classpath 'com.novoda:bintray-release:0.9'
 
         // NOTE: Do not place your application dependencies here; they belong
@@ -20,9 +22,11 @@ buildscript {
 
 allprojects {
     repositories {
-        maven { url 'file:///E:/maven/repository'}
         google()
         jcenter()
+        maven {
+            url "https://dl.bintray.com/aprz512/gradle_plugins"
+        }
     }
 }
 
