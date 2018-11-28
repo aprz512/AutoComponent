@@ -128,9 +128,10 @@ class ProjectModuleManager {
                 return
             }
             // 组件工程是否存在
-            def componentProjectExist = project.rootProject.subprojects.find {
+            def componentProjectExist = project.rootProject.allprojects.find {
                 it.name == componentName
             }
+
             def dependencyMode = (project.gradle.gradleVersion as float) >= 4.1F ? 'api' : 'compile'
             if (componentProjectExist) {
                 println "AUTOC >>>> 扫描到添加组件依赖语句，符合形态标准，准备添加..."

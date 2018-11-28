@@ -1,1 +1,3 @@
-include ':app', ':autoc', ':componenta', ':lib_a'
+include ':app', ':autoc', ':componenta', ':lib_a', ':componentb'
+
+project(':componentb').projectDir = new File(rootProject.projectDir, './libs/componentb')
