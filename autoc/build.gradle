@@ -23,7 +23,7 @@ uploadArchives {
         mavenDeployer {
             pom.groupId = 'com.aprz.module.manager'
             pom.artifactId = 'autoc'
-            pom.version = '1.5.4'
+            pom.version = '1.5.5'
             //提交到远程服务器：
 //             repository(url: "") {
 //                authentication(userName: "", password: "")
@@ -38,7 +38,7 @@ publish {
     userOrg = 'aprz512'
     groupId = 'com.aprz.module.manager'
     artifactId = 'autoc'
-    publishVersion = '1.5.0'
+    publishVersion = '1.5.5'
     desc = 'easy use for component project'
     website = 'https://github.com/aprz512/AutoComponent'
     repoName = 'gradle_plugins'

@@ -20,8 +20,12 @@ class AutocPlugin implements Plugin<Project> {
         println "AUTOC >>>> 安全装置接触..."
         println "AUTOC >>>> 移往扫描端口..."
         println "AUTOC >>>> 检测到工程 (${project.name})，往扫描端口注入 ${ProjectModuleManager.PLUGIN_NAME} 插件..."
+
         def mainApp = ProjectModuleManager.manageModule(project)
+
         performBuildTypeCache(project, mainApp)
+
+        println "AUTOC >>>> 工程 (${project.name}) 扫描完成"
     }
 
     private static void performBuildTypeCache(Project project, boolean isApp) {

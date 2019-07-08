@@ -53,8 +53,10 @@ class ProjectModuleManager {
         if (runAsApp) {
             project.apply plugin: 'com.android.application'
             configSourceSet(project)
+            println("AUTOC >>>> 应用 ‘com.android.application’ 插件成功")
         } else {
             project.apply plugin: 'com.android.library'
+            println("AUTOC >>>> 应用 ‘com.android.library’ 插件成功")
         }
         //为build.gradle添加addComponent方法
         addComponentMethod(project, localProperties)
