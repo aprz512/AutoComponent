@@ -134,7 +134,8 @@ class ProjectModuleManager {
                 it.name == componentName
             }
 
-            def dependencyMode = (project.gradle.gradleVersion as float) >= 4.1F ? 'api' : 'compile'
+            def dependencyMode = project.gradle.gradleVersion > "4.1" ? 'api' : 'compile'
+            println "AUTOC >>>> 解析gradle版本为：$project.gradle.gradleVersion, 依赖模式为 $dependencyMode"
             if (componentProjectExist) {
                 println "AUTOC >>>> 扫描到添加组件依赖语句，符合形态标准，准备添加..."
                 project.dependencies.add(dependencyMode, project.project(":$componentName"))
