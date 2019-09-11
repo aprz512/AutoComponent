@@ -14,8 +14,7 @@ repositories {
 }
 
 dependencies {
-    compile 'com.android.tools.build:gradle:3.2.1'
-
+    implementation 'com.android.tools.build:gradle:3.2.1'
 }
 
 uploadArchives {
@@ -25,10 +24,11 @@ uploadArchives {
             pom.artifactId = 'autoc'
             pom.version = '1.5.6'
             //提交到远程服务器：
+            //gradlew :autoc:clean :autoc:build :autoc:bintrayUpload -PbintrayUser=aprz512 -PbintrayKey=xxxxxx -PdryRun=false
 //             repository(url: "") {
 //                authentication(userName: "", password: "")
 //             }
-            //本地的Maven地址设置为E:/repos
+            //本地的Maven地址设置为 E:/maven/repository
             repository(url: uri('E:/maven/repository'))
         }
     }
@@ -38,7 +38,7 @@ publish {
     userOrg = 'aprz512'
     groupId = 'com.aprz.module.manager'
     artifactId = 'autoc'
-    publishVersion = '1.5.5'
+    publishVersion = '1.5.6'
     desc = 'easy use for component project'
     website = 'https://github.com/aprz512/AutoComponent'
     repoName = 'gradle_plugins'
